@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
     return (
@@ -6,12 +8,12 @@ export default function Header() {
             
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className='container'>
+                    <Link to={'/'}>
                     <a className="align-left p-2" href="#">
                         <img src="./Artba-transparent-logo.png" width="25%" className="align-middle" alt="" loading="lazy" />
                     </a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                </Link>
+                    
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <a className="nav-item nav-link disabled" href="#">Admin</a>
