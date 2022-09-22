@@ -10,7 +10,7 @@ export default function Header() {
                 <div className='container'>
                     <Link to={'/'}>
                     <a className="align-left p-2" href="#">
-                        <img src="./Artba-transparent-logo.png" width="25%" className="align-middle" alt="" loading="lazy" />
+                            <img src="./artba-logo.png" width="25%" className="align-middle" alt="" loading="lazy" />
                     </a>
                 </Link>
                     
