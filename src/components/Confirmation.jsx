@@ -7,7 +7,7 @@ export default function Confirmation() {
     const navigate = useNavigate();
     setTimeout(function () {
    navigate("/")
-    }, 3000)
+    }, 10000)
   return (
       <div className="container mt-5">
         <img className='mb-3' src="./checked.png" width="15%" alt="ArtBA Logo" />
