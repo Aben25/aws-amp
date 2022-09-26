@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+
+.ais-Hits{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+li {
+  align-items: center;
+  margin: 1%;
+  list-style-type: none;
+  width: 100%;
+  border-radius: 0.5rem;
+
+}
+
+.card {
+  padding: 0.5%;
+}
+.Name{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #014065;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.ais-SearchBox-input{
+  width: 100%;
+  height: 100%;
+  border: solid 1px #1ba3dd;
+  background-color: #e6eff3;
+  color: rgb(27, 25, 25);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.ais-Hits-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ais-SearchBox-submit{
+  display: none;
+}
+
+.ais-SearchBox-reset{
+  display: none;
+}
+.stats{
+  font-size: 0.9rem;
+color: #014065;
+padding: 0%;
+margin: 0%;
+}
