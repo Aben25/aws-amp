@@ -23,7 +23,7 @@ const StateResults = ({ searchResults }) => {
 
     return (
         <div>
-            <p className="stats" hidden={!hasResults}>There are {nbHits} results</p>
+            <p className="stats" hidden={!hasResults}>There are {nbHits} results.</p>
         </div>
     );
 };
