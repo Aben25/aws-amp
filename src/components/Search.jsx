@@ -7,6 +7,7 @@ import {
     Configure,
     Highlight,
     connectStateResults,
+    Stats,
 } from "react-instantsearch-dom";
 import { useNavigate } from "react-router-dom";
 import { EventContext } from "../App";
@@ -15,6 +16,19 @@ const searchClient = algoliasearch(
     "SWSFY6ZO07",
     "286c1017af1002e899ded37866d02198"
 );
+
+const StateResults = ({ searchResults }) => {
+    const hasResults = searchResults && searchResults.nbHits !== 0;
+    const nbHits = searchResults && searchResults.nbHits;
+
+    return (
+        <div>
+            <p className="stats" hidden={!hasResults}>There are {nbHits} results</p>
+        </div>
+    );
+};
+const CustomStateResults = connectStateResults(StateResults);
+
 
 function Hit({ hit }) {
     const { setHit } = useContext(EventContext);
@@ -46,8 +60,8 @@ const Results = connectStateResults(
         searchResults && searchResults.nbHits !== 0 ? (
             children
         ) : (
-                <div className="text-danger" >No results have been found for {searchState.query}. <br /> Please see someone at the registration  desk.  </div>
-            
+            <div className="text-danger" >No results have been found for {searchState.query}. <br /> Please see someone at the registration  desk.  </div>
+
         )
 );
 
@@ -65,6 +79,8 @@ export default function Search() {
                     ClassName="searchbox"
                 />
                 <Results>
+                    {showHits ? <CustomStateResults />
+                        : null}
                     {showHits ? <Hits hitComponent={Hit} /> : null}
                 </Results>
             </InstantSearch>
